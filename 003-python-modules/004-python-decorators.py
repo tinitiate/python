@@ -70,13 +70,11 @@ tinitiate.class_function("Class Test")
 
 
 """ MARKDOWN
-## Python Decorators
-* Here we demonstrate a feature where we change the behavior of a function 
-  by passing another function.
-* And below we demonstrate teh same using Decorators
-* Demonstration of Multiple decorators that are chained in Python
+## Python User defined Decorators
+* Demonstration of **Callable Function**, Changes behaviour of an existing Function
+* Demonstration of User defined Decorators to Change behaviour of an existing Function
+* Demonstration of Multiple Decorators that are chained in Python
 MARKDOWN """
-
 # MARKDOWN ```
 # ##########################################
 # Callable Function 
@@ -150,12 +148,15 @@ CouponApply3(100)
 
 
 """ MARKDOWN
-## Python Custom Decorators with Arguments
-*
-*
+## Python Custom Decorators with Parameters or Arguments
+* We can pass arguments to a Decorator and also change the data that goes into 
+  the base function which uses the decorator.
+* Below we demonstrate applying `coupons` using Decorators.
 MARKDOWN """
-
 # MARKDOWN ```
+
+# CREATE DECORATOR WITH ARGUMENT
+################################
 def decorator_coupon(N1):
     def wrap(f):
         def wrapped_f(A):
@@ -163,6 +164,8 @@ def decorator_coupon(N1):
         return wrapped_f
     return wrap    
 
+
+# USE DECORATOR WITH FUNCTION DECLARATION
 @decorator_coupon(15)
 def GetFinalPrice1(A):
     print(A)
@@ -171,8 +174,18 @@ def GetFinalPrice1(A):
 def GetFinalPrice2(A):
     print(A)
 
+
+# Applying Multiple Decorators on a single function declaration
+@decorator_coupon(15)
+@decorator_coupon(25)
+def MultipleCoupons(A):
+    print(A)
     
+
+
+# CALL THE FUNCTION WITH DECORATOR
 GetFinalPrice1(100)
 GetFinalPrice2(100)
+MultipleCoupons(100)
 
 # MARKDOWN ```
