@@ -1,0 +1,28 @@
+<xsd:complexType name="price"
+                 final="restriction"
+                 block="restriction"
+                 abstract="true"
+                 id="price.cType">
+    <xsd:annotation>
+        <xsd:documentation xml:lang="en">
+            Currently, currency is limited to
+            U S Dollars. Note that this type defined
+            non-instantiable.  A derived type must be
+            defined that sets the range.
+        </xsd:documentation>
+    </xsd:annotation>
+    <xsd:simpleContent>
+        <xsd:extension base="xsd:decimal">
+            <xsd:attribute name="currency"
+                           type="xsd:token"
+                           fixed="U S Dollars">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en">
+                        U S Dollars are the only currency
+                        currently allowed.
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:attribute>
+        </xsd:extension>
+    </xsd:simpleContent>
+</xsd:complexType>
