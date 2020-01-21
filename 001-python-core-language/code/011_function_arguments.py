@@ -98,4 +98,17 @@ function_with_one_argument_and_arbitrary_length_arguments(1, 2, 3, 5, 6)
 
 # in this case ONE fixed and FOUR variable length, Same function name
 function_with_one_argument_and_arbitrary_length_arguments(1, 'a1', 'a2', 'a3', 'a4', 'a5', 'a6')
+
+
+# Another function with multiple arguments
+def print_all_args(*args):
+    for x in enumerate(args):
+        print(x)
+
+print_all_args(1,2,3,4,5)
+
+print_all_args('a','b','c','d')
+
 ## >```
+
+

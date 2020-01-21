@@ -12,7 +12,6 @@
 ## >* In python, There is no specific variable declaration and variable
 ## >  initialization.
 ## >* Python supports variable creation and initialization in one go
-
 ## >```
 # Simple variable creation
 variable1 = 1;          # Integer
@@ -47,6 +46,8 @@ print("var200 : ", var200);
 
 
 ## >## Python Operators
+## >* Mathematical Operators
+## >* Augmented assignment Operators
 ## >```
 # Test Variables
 A = 1

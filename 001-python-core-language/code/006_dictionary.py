@@ -34,9 +34,11 @@ print(eats) # OUTPUT: {'OKRA': 'VEGITABLE', 'POTATO': 'ROOT', 'APPLE': 'FRUIT'}
 
 ## >## Adding and Modifying elements of a dictionary
 ## >```
+
+eats = {'APPLE':'FRUIT', 'POTATO':'ROOT', 'OKRA':'VEGETABLE'}
+
 # Print a value of a key 
 print(eats['POTATO']) # OUTPUT: ROOT
-
 
 # Change a Keys value
 eats['POTATO'] = 'VEGETABLE'
@@ -60,8 +62,8 @@ eats = {'APPLE':'FRUIT', 'POTATO':'ROOT', 'OKRA':'VEGETABLE'}
 print(eats.keys())
 eats.keys
 
-
 # Read all elements of a dictionary
+
 for key, value in eats.items():
     print(key, value)
 # OUTPUT

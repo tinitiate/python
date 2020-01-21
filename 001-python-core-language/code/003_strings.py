@@ -59,6 +59,7 @@ print('Fourth character from the end of variable var_test_string: '
 
 ## >### Slicing Strings[ working with string indexes(character positions in the string)]
 ## >```
+var_test_string = "Python is cool"
 # Slicing part of the string using [number:]
 # prints string from specified index position to end of string
 print(var_test_string[6:])
@@ -205,6 +206,7 @@ print ('test'.replace('t','i')) # OUTPUT: iesi
 #default is whitespace 
 print('This is a test'.split()) # prints a LIST, seperated by a whitespace
 print('This|is|a|test'.split('|')) # prints a LIST,  seperated by a pipe |
+print('This,is,a,test'.split(',')) # prints a LIST,  seperated by a comma ,
 
 #splitlines(), Converts multi-line strings to a list
 # Test varaible with multi-line string

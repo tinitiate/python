@@ -188,11 +188,16 @@ print(newList) # OUTPUT: [1, 'A', 2, 3, 4, 5]
 newList.reverse()
 print(newList) # OUTPUT: [5, 4, 3, 2, 'A', 1]
 
-# POP an element out of the list# removes the first or the last element in the list
+
+# POP an element out of the list
+# ------------------------------
+# removes the first or the last element in the list
 newList.pop()
 print(newList) # OUTPUT: [5, 4, 3, 2, 'A']
+
 newList.pop(0)
 print(newList) # OUTPUT: [4, 3, 2, 'A']
+
 
 # Clear a list
 # -----------
