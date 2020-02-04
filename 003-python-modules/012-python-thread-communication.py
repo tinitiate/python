@@ -1,26 +1,25 @@
-#========================================================================================
-# TOPIC: PYTHON - MultiThreading communication
-#========================================================================================
-# NOTES: * PYTHON provides mechanisms for threads to communicate with each other.
-#        * EVENT is a communication mechanism between threads,
-#        * A wait call is made to create a blocking thread, BLOCKING: whose execution 
-#		   will be halted
-#        * A set() call releases all the blocking threads and continues execution.
-#        * The operations must be for the same Event object
-#
-#========================================================================================
-#
-# FILE-NAME       : 031_thread_communication.py
-# DEPENDANT-FILES : These are the files and libraries needed to run this program ;
-#                   N/A
-#
-# AUTHOR          : tinitiate.com / Venkata Bhattaram
-#                   (c) 2014
-#
-# DESC            : PYTHON MultiThreading communication
-#
-#========================================================================================
+""" MARKDOWN
+---
+YamlDesc: CONTENT-ARTICLE
+Title: Python Modules Thread communication
+MetaDescription: Python Modules, Thread communication, Event
+MetaKeywords: Python Modules, Thread Synchronization, Event
+Author: Venkata Bhattaram / tinitiate.com
+ContentName: python-modules-thread-communication
+---
+MARKDOWN """
 
+""" MARKDOWN
+# PYTHON THREAD COMMUNICATION
+* PYTHON provides mechanisms for threads to communicate with each other.
+* EVENT is a communication mechanism between threads,
+* A wait call is made to create a blocking thread, BLOCKING: whose execution 
+  will be halted
+* A set() call releases all the blocking threads and continues execution.
+* The operations must be for the same Event object
+MARKDOWN """
+
+# MARKDOWN```
 # IMPORT the Event class
 from threading import Thread, Event
 import time
@@ -87,9 +86,4 @@ t2.start()
 t1.join()
 t2.join()
 
-
-#========================================================================================
-# END OF CODE
-#========================================================================================
-#TAGS: PYTHON - MultiThreading communication events python event, set() wait()
-#========================================================================================
+# MARKDOWN```

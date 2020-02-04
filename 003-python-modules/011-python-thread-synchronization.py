@@ -1,58 +1,54 @@
-#========================================================================================
-# TOPIC: PYTHON - MultiThreading Parallel programming Concurrent programming
-#========================================================================================
-# NOTES: * This program demonstrates the PYTHON thread synchronization mechanisms 
-#          (this is about Thread conflict and deadlock resolution)
-#        * THREAD CONTENTION: two processes trying to use the same resource 
-#		   at the same time        
-#        * Threads might share the same resource and in such cases there could be 
-#          various contention issues (who should use the resource first.)
-#        * A resource here could be anything from a variable to a file or any thing that 
-#          must be used sequentially.
-#        * LOCKS: One solution to overcome this issue is using LOCKS.
-#        * Python Locks supports locked and unlocked states, a lock will have EXCLUSIVE 
-#          access to the shared resource during the lock period, 
-#		   this will prevent contention 
-#        * lock can be acquired using the "acquire()" function and unlock can be issued 
-#          using release() function.
-#        * PYTHON semaphores, acquire() semaphore.release()
-#        * SEMAPHORES are one more mechanism to implement synchronization,
-#        * They have an internal counter which starts to decrement when an acquire() call  
-#          is made and starts to increment when a release() call is made. The counter  
-#          will never go below zero; but when it is zero, it blocks, waiting for a thread  
-#		   to call the release()
-#        * They are very useful to manage Database connection pools, File writing 
-#          services and situations where precaution needs to be taken when the shared 
-#          resource has limited capacity. 
+""" MARKDOWN
+---
+YamlDesc: CONTENT-ARTICLE
+Title: Python Modules Thread Synchronization
+MetaDescription: Python Modules, Thread Synchronization, Lock, Semaphore
+MetaKeywords: Python Modules, Thread Synchronization, Lock, Semaphore
+Author: Venkata Bhattaram / tinitiate.com
+ContentName: python-modules-thread-synchronization
+---
+MARKDOWN """
 
-#========================================================================================
-#
-# FILE-NAME       : 030_thread_synchronization.py
-# DEPENDANT-FILES : These are the files and libraries needed to run this program ;
-#                   N/A
-#
-# AUTHOR          : tinitiate.com / Venkata Bhattaram
-#                   (c) 2014
-#
-# DESC            : Python Multithreading: thread synchronization 
-#                   (Thread conflict and deadlock resolution)
-#
-#========================================================================================
+""" MARKDOWN
+# PYTHON THREAD SYNCHRONIZATION
+* This program demonstrates the PYTHON thread synchronization mechanisms 
+  (this is about Thread conflict and deadlock resolution)
+* THREAD CONTENTION: two processes trying to use the same resource 
+  at the same time        
+* Threads might share the same resource and in such cases there could be 
+  various contention issues (who should use the resource first.)
+* A resource here could be anything from a variable to a file or any thing that 
+  must be used sequentially.
+* LOCKS: One solution to overcome this issue is using LOCKS.
+* Python Locks supports locked and unlocked states, a lock will have EXCLUSIVE 
+  access to the shared resource during the lock period, 
+  this will prevent contention 
+* lock can be acquired using the "acquire()" function and unlock can be issued 
+  using release() function.
+* PYTHON semaphores, acquire() semaphore.release()
+* SEMAPHORES are one more mechanism to implement synchronization,
+* They have an internal counter which starts to decrement when an acquire() call  
+  is made and starts to increment when a release() call is made. The counter  
+  will never go below zero; but when it is zero, it blocks, waiting for a thread  
+  to call the release()
+* They are very useful to manage Database connection pools, File writing 
+  services and situations where precaution needs to be taken when the shared 
+  resource has limited capacity. 
+MARKDOWN """
+  
 
-########################################
-# 1) PYTHON THREAD Contention Scenario
-########################################
-
+""" MARKDOWN
+# PYTHON THREAD CONTENTION SCENARIO
+* Here we create a shared resource that will be called THREE times in threads
 # Create a SHARED resource a "print to screen" method 
 # Required for SLEEP operation
 from threading import Thread, Lock, RLock, Semaphore
 import time
+MARKDOWN """
+from threading import Thread 
 
 
-print("CONTENTION SCENARIO")
-print("Thread UnSafe execution where there is no Order of printing messages")
-print("--------------------------------------------------------------------")
-
+# THREAD UNSAFE EXECUTION SCENARIO: where there is no Order of printing messages")
 
 # * This is a class [commonResource] a function prints a message  
 #   to SCREEN three times,waiting a second in-between the PRINT.
@@ -110,18 +106,19 @@ t3.join()
 print("NON-CONTENTION SCENARIO, Using LOCKS")
 print("Thread Safe execution where there is the specified Order of printing messages")
 print("-----------------------------------------------------------------------------")
-
+# MARKDOWN ```
 
 
 # To over come this issue we have to SYNCHRONIZE the process.
-
+""" MARKDOWN
 #####################################
 # 2) Using Locks to avoid contention
 #####################################
 # Using the lock mechanism to implement synchronization
 # re-writing the same above program with locking using acquire() and release()
+MARKDOWN """
 
-
+# MARKDOWN ```
 class ThreadSafeCommonResource:
     "this is a class that provides a file and file writing function"
 
@@ -175,23 +172,23 @@ t3.join()
 # on using the LOCK synchronization.
 
 
-
-print("NON-CONTENTION SCENARIO, Using SEMAPHORES")
-print("Thread Safe execution where there is the specified Order of printing messages")
-print("-----------------------------------------------------------------------------")
+# MARKDOWN ```
 
 
-####################################
-# 3) SEMAPHORES
-####################################
-# * SEMAPHORES are one more mechanism to implement synchronization,
-# * They have an internal counter which starts to decrement when an acquire() call is  
-#   made and starts to increment when a release() call is made. The counter will never go 
-#   below zero; but when it is zero, it blocks, waiting for a thread to call the release()
-# * They are very useful to manage Database connection pools, File writing services
-#   and situations where precaution needs to be taken when the shared resource has
-#   limited capacity. 
+""" MARKDOWN
+# SEMAPHORES
+* SEMAPHORES are one more mechanism to implement synchronization,
+* They have an internal counter which starts to decrement when an acquire() call is  
+  made and starts to increment when a release() call is made. The counter will never go 
+  below zero; but when it is zero, it blocks, waiting for a thread to call the release()
+* They are very useful to manage Database connection pools, File writing services
+  and situations where precaution needs to be taken when the shared resource has
+  limited capacity. 
+MARKDOWN """
+# MARKDOWN ```
 
+# NON-CONTENTION SCENARIO, Using SEMAPHORES
+# Thread Safe execution where there is the specified Order of printing messages
 
 # The below function implements the use of semaphores
 def Print2ConsoleSemaphore(message, semaphore):
@@ -230,10 +227,4 @@ t1.join()
 t2.join()
 t3.join()
 
-
-#========================================================================================
-# END OF CODE
-#========================================================================================
-#TAGS: PYTHON - thread synchronization Locks RLocks Semaphores Conditions
-#
-#========================================================================================
+# MARKDOWN ```
