@@ -1,6 +1,6 @@
 # python
 > (c) Venkata Bhattaram
-
+![tinitiate](python-ms-logo.png "tinitiate python")
 ---
 * Core Python Language
 * Python Object Oriented Programming
