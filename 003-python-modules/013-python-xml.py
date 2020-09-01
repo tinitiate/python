@@ -138,12 +138,21 @@ import xml.sax
 # Create Class With the Constructor / StartElement / EndElement methods
 class TIContentHandler(xml.sax.ContentHandler):
     def __init__(self):
-    xml.sax.ContentHandler.__init__(self)
-
+        xml.sax.ContentHandler.__init__(self)
+        self.CurrentData = ""
+        
     def startElement(self, name, attrs):
         print("startElement :" + name)
+        self.CurrentData = name
         if name == "code":
             print("\tattribute id=" + attrs.getValue("id"))
+    
+    def characters(self, content):
+        if self.CurrentData == "course":
+            print(content)
+
+        if self.CurrentData == "code":
+            print(content)
 
     def endElement(self, name):
         print("endElement:"  + name)
