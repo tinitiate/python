@@ -21,16 +21,17 @@ MARKDOWN """
 MARKDOWN """
 
 # MARKDOWN ```
-class Test:
+class oop_calc:
 
-    num1 = None
-    num2 = None
+    n1 = None
+    n2 = None
             
-    def add1(self, num1, num2):
-        return num1 + num2
+    def add1(self):
+        return self.n1 + self.n2
 
-    def mul1(self, num1, num2):
-        return num1 * num2
+    def mul1(self):
+        return self.n1 * self.n2
+
 
 # MARKDOWN ```
 
@@ -40,17 +41,26 @@ class Test:
 MARKDOWN """
 
 # MARKDOWN ```
-from class_test import Test as t1
+from oop_calc import oop_calc
 
-Obj1 = t1()
-Obj1.num1 = 100
-Obj1.num2 = 200
+# session f1
+# ##############
+f1 = oop_calc()
+f1.n1 = 100
+f1.n2 = 200
+print(f1.add1())
+print(f1.mul1())
 
-Obj2 = t1()
-Obj2.num1 = 1000
-Obj2.num2 = 2000
 
-print(Obj1.__sizeof__() + Obj2.__sizeof__())
+# session f2
+# ##############
+f2 = oop_calc()
+f2.n1 = 1000
+f2.n2 = 2000
+print(f2.add1())
+print(f2.mul1())
+
+print(f1.__sizeof__() + f2.__sizeof__())
 
 # MARKDOWN ```
 
