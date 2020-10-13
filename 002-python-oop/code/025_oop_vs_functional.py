@@ -62,14 +62,14 @@ print(Obj1.__sizeof__() + Obj2.__sizeof__())
 MARKDOWN """
 
 # MARKDOWN ```
-num1 = None
-num2 = None
+n1 = None
+n2 = None
         
-def add1(self, num1, num2):
-    return num1 + num2
+def add1():
+    return n1 + n2
 
-def mul1(self, num1, num2):
-    return num1 * num2
+def mul1():
+    return n1 * n2
 # MARKDOWN ```
 
 
@@ -86,11 +86,11 @@ MARKDOWN """
 import func_test as f1
 import func_test as f2
 
-f1.num1 = 100
-f1.num2 = 200
+f1.n1 = 100
+f1.n2 = 200
 
-f2.num1 = 1000
-f2.num2 = 2000
+f2.n1 = 1000
+f2.n2 = 2000
 
 print(f1.__sizeof__() + f2.__sizeof__())
 # MARKDOWN ```
