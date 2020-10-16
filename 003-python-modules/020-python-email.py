@@ -51,6 +51,15 @@ msg['Subject'] = "This is a TINITIATE test EMAIL"
 # Send the message via your local SMTP server.
 s = smtplib.SMTP('localhost')
 
+# Instead of LOCALHOST you can send email from your GMAIL account using the following
+"""
+gmail_user = 'you@gmail.com'
+gmail_password = 'P@ssword!'
+s = smtplib.SMTP_SSL('smtp.gmail.com', 465)
+s.ehlo()
+s.login(gmail_user, gmail_password)
+"""
+
 # sendmail function requires 3 arguments: sender, recipient and message
 s.sendmail(sender, receiver, msg.as_string())
 
