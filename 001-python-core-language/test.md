@@ -28,7 +28,7 @@ ContentName: tuples
 * We cannot change individual elements of tuple
 * tuple1[0]=99 # This will result in an error as TUPLES are immutable
 * we can overwrite a tuple though
-```
+```python
 
 # CREATE TUPLE
 tuple1 = (1, 2, 3, 4)
