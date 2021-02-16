@@ -95,3 +95,14 @@ try:
 except:
     pass  # This will do nothing
 ## >```
+
+## >## Python Default Exception
+## >* Get Exception Name and Message
+## >```
+try:
+    v = 1/0
+except Exception as e:
+    print(type(e).__name__, e)
+## >```    
+
+
