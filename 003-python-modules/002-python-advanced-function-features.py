@@ -59,10 +59,10 @@ def addTwoNums(func):
     num2 = 2
     
     # Return the parameter, by passing another parameter "num1"
-    if func == 'add5':
+    if func == add5:
         return func(num1)
         
-    elif func == 'addSpl':
+    elif func == addSpl:
         return func(num1, num2)
 
 # Calling "addTwoNums" function with "add5" function 
