@@ -2,7 +2,6 @@
 > (c) Venkata Bhattaram
 
 ![tinitiate](python-ms-logo.png "tinitiate python")
--- dev
 ---
 * Core Python Language
 * Python Object Oriented Programming
