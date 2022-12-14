@@ -55,4 +55,13 @@ for restaurant in y["BillDetails"]:
     print(restaurant["Product"])
 
 # MARKDOWN```
-
+## TODO:
+# json String to json object
+# json string to dictionary
+# dictionary to json object
+# dictionary to json string
+# json object to json string
+# json object to dictionary
+# json object to file 
+# reading json file to json object/dictionary 
+# writing json object/dictionary to json file.
