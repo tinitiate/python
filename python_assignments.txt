@@ -4,7 +4,7 @@
 2. Swap values in integer variables
 3. Swap values in string variables
 4. From emailid get the domain name
-5. Data Structure (Employee and Parts & Suppliers)
+5. Data Structure ([1] Employee AND [2] Products/Invoice)
     a. No LOOPs No Conditional tasks
     b. LOOPs and Conditional tasks
 6. Functions Greatest, Least, Get all even, Get all Odd in descending order
