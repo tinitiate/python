@@ -1,6 +1,25 @@
 import json
 import requests
 
+
+# Reading json file to json object/dictionary  
+# Using Load
+# ###########################################
+with open('bills.json') as f:    
+    data = json.load(f)
+    # print(data)
+
+StoreLocation=data['StoreLocation']  
+BillDate=data['BillDate']
+
+for bill in data['BillDetails']:
+    Product=bill['Product']
+    print(Product)
+
+# ###########################################
+
+# Using API
+# Using Loads
 request = requests.get("http://www.7timer.info/bin/api.pl?lon=113.17&lat=23.09&product=astro&output=json")
 response =request.text
 
