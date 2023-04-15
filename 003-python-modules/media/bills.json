@@ -1,0 +1,25 @@
+{
+    "BillNumber": 1245,
+    "BillTotal": 3000,
+    "StoreLocation": "New York",
+    "BillDetails": [
+        {
+            "Product": "Soda",
+            "Quantity": 10,
+            "UnitPrice": 2,
+            "LineItemPrice": 20
+        },
+        {
+            "Product": "Chips",
+            "Quantity": 5,
+            "UnitPrice": 3,
+            "LineItemPrice": 15
+        },
+        {
+            "Product": "cookies",
+            "Quantity": 4,
+            "UnitPrice": 5,
+            "LineItemPrice": 20
+        }
+    ]
+}
