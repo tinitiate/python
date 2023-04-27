@@ -18,9 +18,9 @@
 
 ```python
 import csv
-with open('data.csv', 'r') as csv_file:
+with open('E:\\python-master\\media\\003-python-modules\\data.csv', 'r') as csv_file:
     csv_reader = csv.reader(csv_file)    
-    print(csv_data)    
+    print(csv_reader)    
         
     # Ignore Headers or first line of the data
     next(csv_reader)
@@ -38,7 +38,7 @@ with open('data.csv', 'r') as csv_file:
 
 ```python
 import csv
-with open('data.csv', 'r') as csv_file:
+with open('E:\\python-master\\media\\003-python-modules\\data.csv', 'r') as csv_file:
     csv_reader = csv.reader(csv_file)    
     
     # with open('data_new.csv', 'w',newline='') as new_file:
@@ -57,7 +57,7 @@ with open('data.csv', 'r') as csv_file:
 
 ```python
 import csv
-with open('data.csv', 'r') as csv_file:
+with open('E:\\python-master\\media\\003-python-modules\\data.csv', 'r') as csv_file:
     csv_reader = csv.DictReader(csv_file)
 
     for line in csv_reader:
@@ -93,6 +93,7 @@ with open('data.csv', 'r') as csv_file:
 ## Writing to csv only specific columns using `csv.DictWriter`
 
 ```python
+import csv
 with open('data.csv', 'r') as csv_file:    
     csv_reader = csv.DictReader(csv_file)    
     
