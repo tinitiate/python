@@ -1,43 +1,26 @@
+## Pre-requiste for the code to run 
+#  pip install requests
+
 import requests
 import json
 
-def send_post_request_json(url, data):
-    """
-    Sends a POST request with json-encoded data to the specified URL
-    Prints the response text received from the API endpoint
-    """
-    response = requests.post(url, data=data)
-    print(response.text)
+# Define the URL to send the request to
+url = "https://fakestoreapi.com/products"
 
-def send_post_request_json_with_headers(url, data, headers):
-    """
-    Sends a POST request with json-encoded data and headers to the specified URL
-    Prints the response text received from the API endpoint
-    """
-    response = requests.post(url, json=data, headers=headers)
-    print(response.text)
+# Define the data to send in the request body
+data = {
+    "title": "test product",
+    "price": 13.5,
+    "description": "lorem ipsum set",
+    "image": "https://i.pravatar.cc",
+    "category": "electronic"
+}
 
-def main():
-    # URL to API endpoint
-    url = 'https://fakestoreapi.com/products'
+# Define any headers to include in the request
+headers = {"Content-Type": "application/json"}
 
-    # JSON-encoded data to be sent in the request body
-    data = {
-        'title': 'Laptop',
-        'price': 900.99,
-        'description': 'Dell Inspiron',
-        'image': 'https://i.pravatar.cc',
-        'category': 'electronic'
-    }
+# Send the POST request
+response = requests.post(url, headers=headers, data=json.dumps(data))
+json_response = response.json()
 
-    # POST request with JSON-encoded data
-    json_data = send_post_request_json(url, data)
-
-    # Headers to be sent in the request
-    headers = {'Content-Type': 'application/json'}
-
-    # POST request with JSON-encoded data and headers
-    json_data_with_headers = send_post_request_json_with_headers(url, data, headers)
-
-if __name__ == '__main__':
-    main()
+print(json_response)
