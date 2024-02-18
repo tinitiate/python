@@ -8,5 +8,5 @@
 * Python Modules
 ---
 
-For Training and Project Support contact **syntaxboard@gmail.com**  | 
+For Training and Project Support contact **training.tinitiate@gmail.com**  | 
 ------------------------------------------------------------------- | 
