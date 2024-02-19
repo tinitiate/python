@@ -1,0 +1,2 @@
+* The `with open()` statement is a Python expression used to work with files.
+* It provides a way to ensure that a file is closed when the block inside the `with` statement is exited, regardless of how the block is exited. This is test line.Welcome to Tinitiate.

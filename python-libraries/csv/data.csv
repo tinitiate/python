@@ -1,0 +1,11 @@
+FirstName,LastName,Email,Amount,MaxAmount,Status,Country,Start
+John,Doe,johndoe@email.com,500,1000,Active,USA,2024-02-14
+Alice,Smith,alicesmith@email.com,800,1200,Inactive,Canada,2024-02-14
+Bob,Johnson,bobjohnson@email.com,600,900,Active,UK,2024-02-14
+Emma,Miller,emmamiller@email.com,700,1100,Active,Australia,2024-02-14
+Michael,Williams,michaelwilliams@email.com,400,800,Inactive,Germany,2024-02-14
+Sophia,Anderson,sophiaanderson@email.com,900,1300,Active,France,2024-02-14
+Daniel,White,danielwhite@email.com,300,700,Inactive,Japan,2024-02-14
+Olivia,Brown,oliviabrown@email.com,1000,1400,Active,Spain,2024-02-14
+David,Smith,davidsmith@email.com,750,1000,Active,Italy,2024-02-14
+Isabella,Taylor,isabellataylor@email.com,550,950,Inactive,Brazil,2024-02-14

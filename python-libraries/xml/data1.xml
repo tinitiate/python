@@ -1,0 +1,10 @@
+<tinitiate>
+    <training>
+        <course num="1">JAVA</course>
+        <course num="2">UNIX</course>
+        <course num="3">PERL</course>
+        <course num="4">PYTHON</course>
+    </training>
+    <code id="1"> Python XML Parsing </code>
+    <code id="2"> Python File writing </code>
+</tinitiate>
